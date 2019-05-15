@@ -25,6 +25,10 @@
 #define MAX_PROJECTILES 4
 #define MAX_ASTEROIDS 20
 
+// Limits for how far the base station can move to the left and right
+#define BASE_MOVE_LIMIT_LEFT 1
+#define BASE_MOVE_LIMIT_RIGHT 6
+
 // Arguments that can be passed to move_base() below
 #define MOVE_LEFT 0
 #define MOVE_RIGHT 1

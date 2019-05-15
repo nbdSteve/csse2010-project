@@ -156,8 +156,17 @@ int8_t move_base(int8_t direction) {
 	// We erase the base from its current position first
 	redraw_base(COLOUR_BLACK);
 	
-	// Move the base (only to the left at present)
-	basePosition--;
+	// Author: Stephen
+	// Move the base to left and right
+	if (direction == MOVE_LEFT) {
+		if (basePosition >= BASE_MOVE_LIMIT_LEFT) {
+			basePosition--;
+		}
+	} else if (direction == MOVE_RIGHT) {
+		if (basePosition <= BASE_MOVE_LIMIT_RIGHT) {
+			basePosition++;
+		}
+	}
 	
 	// Redraw the base
 	redraw_base(COLOUR_BASE);
